@@ -17,7 +17,7 @@ http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/
 		<db:select doc:name="Select" doc:id="4b6952ff-34f9-4f5d-bc65-1cf475236186" config-ref="Database_Config">
 			<db:sql >select * from contacts</db:sql>
 		</db:select>
-		<ee:transform doc:name="Transform Message" doc:id="3f74ae9f-c6eb-4f26-b33d-1b64f4bb2f2e" >
+		<ee:transform doc:name="Transform Message to json" doc:id="3f74ae9f-c6eb-4f26-b33d-1b64f4bb2f2e" >
 			<ee:message >
 				<ee:set-payload ><![CDATA[%dw 2.0
 output application/json
